@@ -1,0 +1,18 @@
+Body {
+    background-color: #FEE4C3;
+}
+.texto {
+    color: black;
+    text-align: center;
+}
+
+.notas {
+    text-align: center;
+    color: black;
+    font-size: small;
+}
+.imagem {
+    text-align: center;
+    width:30px;
+    height: 30px;
+}
