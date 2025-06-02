@@ -16,3 +16,10 @@ Body {
     width:30px;
     height: 30px;
 }
+.aluno {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px #ccc;
+}
