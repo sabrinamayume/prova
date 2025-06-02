@@ -1,22 +1,22 @@
 <html>
-    <head>
-        <title>cadastro</title>
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="texto">
-            <h1>Alunos</h1>
-            <img src="logo.png" alt="logo">
-        </div>
+<head>
+    <title>Cadastro</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="texto">
+        <h1>Alunos</h1>
+        <img src="/logo.png" alt="logo">
+    </div>
 
-        <h1>Alunos Cadastrados</h1>
-        <div id="alunos"></div>
+    <h2>Alunos Cadastrados</h2>
+    <div id="alunos"></div>
+
     <script>
         fetch('/cadastrar')
-            .then(resposta => resposta.json())
+            .then(res => res.json())
             .then(dados => {
                 const divAlunos = document.getElementById('alunos');
-
                 if (!dados || dados.length === 0) {
                     divAlunos.innerHTML = "<p>Nenhum aluno encontrado.</p>";
                     return;
@@ -29,15 +29,16 @@
                         <strong>Nome:</strong> ${aluno.nome}<br>
                         <strong>Nota 1:</strong> ${aluno.nota1}<br>
                         <strong>Nota 2:</strong> ${aluno.nota2}<br>
-                        <strong>Nota 3:</strong> ${aluno.nota3}
+                        <strong>Nota 3:</strong> ${aluno.nota3}<br><hr>
                     `;
                     divAlunos.appendChild(div);
                 });
             })
-            .catch(erro => {
-                console.error("Erro ao buscar dados:", erro);
-                document.getElementById('alunos').innerHTML = "<p>Erro ao carregar os alunos.</p>";
+            .catch(err => {
+                console.error("Erro ao carregar alunos:", err);
+                document.getElementById('alunos').innerHTML = "<p>Erro ao buscar alunos.</p>";
             });
     </script>
-    </body>
+    <a href="pagina.html"> VOLTAR </a>
+</body>
 </html>

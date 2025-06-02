@@ -1,38 +1,36 @@
 <html>
-    <head>
-        <title>cadastro</title>
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="texto">
-            <h1>Alunos</h1>
-            <img src="logo.png" alt="logo">
-        </div>
-        <div class="notas">
-            <h4>
-            <form action="/cadastrar" method="post">
-                <p><label for="nome">Aluno: <input type="text" id="nome" name="nome" required></label></p> 
+<head>
+    <title>Cadastro</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="texto">
+        <h1>Alunos</h1>
+        <img src="logo.png" alt="logo">
+    </div>
 
-                <p><label for="nota1">Nota1: <input type="number" id="nota1" name="nota1" required></label></p>
+    <div class="notas">
+        <form action="/cadastrar" method="post">
+            <p><label for="nome">Aluno: <input type="text" id="nome" name="nome" required></label></p>
+            <p><label for="nota1">Nota 1: <input type="number" id="nota1" name="nota1" required></label></p>
+            <p><label for="nota2">Nota 2: <input type="number" id="nota2" name="nota2" required></label></p>
+            <p><label for="nota3">Nota 3: <input type="number" id="nota3" name="nota3" required></label></p>
+            <p><button type="submit">Salvar Nota</button></p>
+        </form>
+    </div>
 
-                <p><label for="nota2">Nota2: <input type="number" id="nota2" name="nota2" required></label></p>
+    <div class="texto">
+        <h3>Verificar Média de um Aluno</h3>
+        <form action="/media" method="get">
+            <label for="aluno_media">Digite o nome:</label>
+            <input type="text" name="aluno_media" id="aluno_media" required>
+            <button type="submit">Ver Média</button>
+        </form>
+    </div>
 
-                <p><label for="nota3">Nota3: <input type="number" id="nota3" name="nota3" required></label></p>
-
-                <p><button type="submit">Salvar Nota</button></p>
-            </form>
-            </h4>
-        </div>
-        <div class="texto">
-            <h3>Média:</h3>
-        </div>
-        <div class="notas">
-            <h3>
-                <a href="pagina2.html">
-                    <button type="button">ver alunos</button>
-                </a>
-            </h3>
-        </div>
-    </body>
+    <div class="notas">
+        <h3>Ver todos os alunos cadastrados</h3>
+        <a href="/pagina"><button type="button">Ver Lista</button></a>
+    </div>
+</body>
 </html>
-
